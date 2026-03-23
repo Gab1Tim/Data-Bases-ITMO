@@ -54,6 +54,7 @@ HAVING avg(date_part('year', age(lud."ДАТА_РОЖДЕНИЯ"))) < (
 -----
 
 --6--
+
 SELECT lud."ФАМИЛИЯ", lud."ИМЯ", lud."ОТЧЕСТВО", uch."ГРУППА", uch."П_ПРКОК_ИД", uch."ПРИМЕЧАНИЕ", uch."НАЧАЛО" FROM "Н_ЛЮДИ" lud
 JOIN "Н_УЧЕНИКИ" uch ON lud."ИД" = uch."ЧЛВК_ИД"
 JOIN "Н_ПЛАНЫ" pl ON uch."ПЛАН_ИД" = pl."ПЛАН_ИД"
